@@ -9,7 +9,6 @@ local servers = {
     },
     pyright = {},
     rust_analyzer = {},
-    -- To add Go: gopls = {},
 }
 
 return {
