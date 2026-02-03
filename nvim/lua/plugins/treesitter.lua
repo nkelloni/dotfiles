@@ -3,7 +3,7 @@ return {
     lazy = false,
     build = ':TSUpdate',
     config = function()
-        local langs = { 'lua', 'python', 'rust' }
+        local langs = { 'lua', 'python', 'rust', 'yaml' }
 
         require('nvim-treesitter').install(langs)
 

@@ -24,7 +24,7 @@ return {
                 ['<C-Space>'] = cmp.mapping.complete(),         -- Trigger completion
                 ['<C-e>'] = cmp.mapping.abort(),                -- Close menu
                 ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Confirm selection
-                ['<Tab>'] = cmp.mapping(function(fallback)      -- Tab to next item
+                ['<C-n>'] = cmp.mapping(function(fallback)      -- Ctrl+n to next item
                     if cmp.visible() then
                         cmp.select_next_item()
                     elseif luasnip.expand_or_jumpable() then
@@ -33,7 +33,7 @@ return {
                         fallback()
                     end
                 end, { 'i', 's' }),
-                ['<S-Tab>'] = cmp.mapping(function(fallback)    -- Shift-Tab to prev item
+                ['<C-p>'] = cmp.mapping(function(fallback)      -- Ctrl+p to prev item
                     if cmp.visible() then
                         cmp.select_prev_item()
                     elseif luasnip.jumpable(-1) then
